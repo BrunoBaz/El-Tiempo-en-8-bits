@@ -110,6 +110,7 @@ section#carrusel {
   width: 100vw;
 }
 ul {
+  margin: 0;
   padding: 0.3rem;
   display: grid;
   overflow-x: auto;
