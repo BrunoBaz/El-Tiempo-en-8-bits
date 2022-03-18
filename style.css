@@ -22,7 +22,8 @@ body.noche {
   text-align: center;
 }
 header {
-  margin: 1rem;
+  padding-top: 1rem;
+  margin-bottom: 1rem;
   position: relative;
 }
 main {
@@ -39,6 +40,7 @@ section#gps {
   bottom: 100px;
   left: 10px;
   right: 10px;
+  margin-bottom: 3rem;
 }
 section#gps.activo {
   display: block;
@@ -48,6 +50,7 @@ section#gps.activo {
   bottom: 100px;
   left: 10px;
   right: 10px;
+  margin-bottom: 3rem;
 }
 
 p {
