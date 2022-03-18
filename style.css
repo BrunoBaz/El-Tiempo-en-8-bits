@@ -7,7 +7,7 @@ body {
   height: 100vh;
   background-image: url(Recursos/2.fondo\ dia.png);
   background-color: #66cccc;
-  background-size: contain;
+  background-size: cover;
   background-position: center bottom;
   background-repeat: repeat-x;
   text-align: center;
@@ -18,7 +18,7 @@ body.noche {
   height: 100vh;
   background-image: url(Recursos/3.fondo\ noche.png);
   background-color: #66cccc;
-  background-size: contain;
+  background-size: cover;
   background-position: center bottom;
   background-repeat: repeat-x;
   text-align: center;
