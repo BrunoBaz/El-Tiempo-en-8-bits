@@ -8,7 +8,7 @@ body {
   background-image: url(Recursos/2.fondo\ dia.png);
   background-color: #66cccc;
   background-size: cover;
-  background-position: center bottom;
+  background-position: center center;
   background-repeat: repeat-x;
   text-align: center;
   display: flex;
@@ -19,7 +19,7 @@ body.noche {
   background-image: url(Recursos/3.fondo\ noche.png);
   background-color: #66cccc;
   background-size: cover;
-  background-position: center bottom;
+  background-position: center center;
   background-repeat: repeat-x;
   text-align: center;
   display: flex;
@@ -132,6 +132,7 @@ li {
   min-width: 25%;
   height: 10%;
   padding: 15px;
+  border: 1px solid black;
 }
 
 li img {
