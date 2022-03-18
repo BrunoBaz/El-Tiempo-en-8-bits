@@ -18,60 +18,64 @@
     <header id="logo">
       <img src="Recursos/1.logo.svg" alt="logo de el tiempo en 8 bits" />
     </header>
-
-    <section class="activo" id="gps">
-      <img src="Recursos/G.9.GPS-animacion.gif" alt="grafico de pantalla gps" />
-      <p>¿Nos dejas ver tu ubicación?</p>
-      <button type="submit" id="gps-boton"><p>PERMITIR GPS</p></button>
-    </section>
-    <section class="clima" hidden id="despejado">
-      <img
-        class="sol"
-        id="sol"
-        src="Recursos/G.1.sol-animacion.gif"
-        alt="despejado"
-        hidden
-      />
-      <img
-        class="luna"
-        id="luna"
-        src="Recursos/G.1.1luna-animacion.gif"
-        alt="despejado"
-        hidden
-      />
-      <p>Hace un clima perfecto para un paseo</p>
-    </section>
-    <section class="clima" hidden id="cloudy">
-      <img src="Recursos/G.2.pocas-nubes-animacion.gif" alt="pocas nubes" />
-      <p>Parece que habrá algunas nubes</p>
-    </section>
-    <section class="clima" hidden id="nublado">
-      <img src="Recursos/G.3.nublado-animacion.gif" alt="nublado" />
-      <p>El cielo está cubierto de nubes</p>
-    </section>
-    <section class="clima" hidden id="lluvia">
-      <img src="Recursos/G.4.lluvia-animacion.gif" alt="lloverá" />
-      <p>Coge un paraguas porque está lloviendo</p>
-    </section>
-    <section class="clima" hidden id="tormenta">
-      <img src="Recursos/G.6.tormenta-animacion.gif" alt="tormenta" />
-      <p>Mejor quedate en casa, hay una tormenta</p>
-    </section>
-    <section class="clima" hidden id="nieve">
-      <img src="Recursos/G.7.nieve-animacion.gif" alt="Nieve" />
-      <p>Abrigate bien, está nevando</p>
-    </section>
-    <section class="clima" hidden id="neblina">
-      <img src="Recursos/G.8.niebla-animacion.gif" alt="neblina" />
-      <p>Mucha niebla, no vayas a Silent Hill</p>
-    </section>
-    <section hidden id="error">
-      <img src="Recursos/error-animacion.gif" alt="error" />
-      <p>Ha habido un problema, vuelve a intentarlo</p>
-    </section>
-    <section class="carrusel" hidden id="carrusel">
-      <ul class="Grid-tiempo"></ul>
-    </section>
+    <main>
+      <section class="activo" id="gps">
+        <img
+          src="Recursos/G.9.GPS-animacion.gif"
+          alt="grafico de pantalla gps"
+        />
+        <p>¿Nos dejas ver tu ubicación?</p>
+        <button type="submit" id="gps-boton"><p>PERMITIR GPS</p></button>
+      </section>
+      <section class="clima" hidden id="despejado">
+        <img
+          class="sol"
+          id="sol"
+          src="Recursos/G.1.sol-animacion.gif"
+          alt="despejado"
+          hidden
+        />
+        <img
+          class="luna"
+          id="luna"
+          src="Recursos/G.1.1luna-animacion.gif"
+          alt="despejado"
+          hidden
+        />
+        <p>Hace un clima perfecto para un paseo</p>
+      </section>
+      <section class="clima" hidden id="cloudy">
+        <img src="Recursos/G.2.pocas-nubes-animacion.gif" alt="pocas nubes" />
+        <p>Parece que habrá algunas nubes</p>
+      </section>
+      <section class="clima" hidden id="nublado">
+        <img src="Recursos/G.3.nublado-animacion.gif" alt="nublado" />
+        <p>El cielo está cubierto de nubes</p>
+      </section>
+      <section class="clima" hidden id="lluvia">
+        <img src="Recursos/G.4.lluvia-animacion.gif" alt="lloverá" />
+        <p>Coge un paraguas porque está lloviendo</p>
+      </section>
+      <section class="clima" hidden id="tormenta">
+        <img src="Recursos/G.6.tormenta-animacion.gif" alt="tormenta" />
+        <p>Mejor quedate en casa, hay una tormenta</p>
+      </section>
+      <section class="clima" hidden id="nieve">
+        <img src="Recursos/G.7.nieve-animacion.gif" alt="Nieve" />
+        <p>Abrigate bien, está nevando</p>
+      </section>
+      <section class="clima" hidden id="neblina">
+        <img src="Recursos/G.8.niebla-animacion.gif" alt="neblina" />
+        <p>Mucha niebla, no vayas a Silent Hill</p>
+      </section>
+      <section hidden id="error">
+        <img src="Recursos/error-animacion.gif" alt="error" />
+        <p>Ha habido un problema, vuelve a intentarlo</p>
+      </section>
+      <section class="carrusel" hidden id="carrusel">
+        <ul class="Grid-tiempo"></ul>
+      </section>
+    </main>
     <script src="scripts.js"></script>
   </body>
 </html>

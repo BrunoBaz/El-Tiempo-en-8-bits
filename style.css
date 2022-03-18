@@ -8,7 +8,7 @@ body {
   background-image: url(Recursos/2.fondo\ dia.png);
   background-color: #66cccc;
   background-size: contain;
-  background-position: center center;
+  background-position: fixed;
   background-repeat: repeat-x;
   text-align: center;
   display: flex;
@@ -19,16 +19,20 @@ body.noche {
   background-image: url(Recursos/3.fondo\ noche.png);
   background-color: #66cccc;
   background-size: contain;
-  background-position: center center;
+  background-position: fixed;
   background-repeat: repeat-x;
   text-align: center;
-  display: flex;
-  flex-direction: column;
 }
 header {
   margin: 2rem;
 }
-
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
 section#gps {
   margin: 3rem;
   display: none;
@@ -58,8 +62,8 @@ header img {
   width: 15rem;
 }
 
-img {
-  width: 15rem;
+section img {
+  width: 10rem;
 }
 
 button {
@@ -69,7 +73,7 @@ button {
   background-repeat: no-repeat;
   background-position: 0px;
   text-align: center;
-  padding: 2rem;
+  padding: 1rem 0;
   font-family: "Press Start 2P", cursive;
   border: 0cm;
   width: 10rem;
@@ -80,6 +84,7 @@ button {
 button p:hover {
   font-family: "Press Start 2P", cursive;
   color: rgb(255, 255, 255);
+  text-align: center;
 }
 
 button:hover {
@@ -101,7 +106,7 @@ section#carrusel {
   background-color: rgba(240, 248, 255, 0.219);
   border-radius: 10px;
   align-self: center;
-  width: 50vw;
+  width: 100vw;
 }
 ul {
   display: flex;
@@ -131,7 +136,6 @@ ul::-webkit-scrollbar-thumb:hover {
 
 li {
   list-style: none;
-  min-width: 25%;
 
   padding: 15px;
 }
