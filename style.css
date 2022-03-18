@@ -109,11 +109,9 @@ section#carrusel {
   border-radius: 10px;
   align-self: center;
   width: 50vw;
-  display: flex;
-  justify-content: center;
 }
 ul {
-  padding: 0.5rem;
+  padding: 0.3rem;
   display: grid;
   overflow-x: auto;
   list-style-type: disc;
