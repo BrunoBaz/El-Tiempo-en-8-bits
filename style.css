@@ -11,8 +11,6 @@ body {
   background-position: center bottom;
   background-repeat: repeat-x;
   text-align: center;
-  display: flex;
-  justify-content: center;
 }
 body.noche {
   height: 100vh;
@@ -24,15 +22,13 @@ body.noche {
   text-align: center;
 }
 header {
-  margin-top: 1rem;
-  /* position: fixed; */
+  margin: 1rem;
+  position: relative;
 }
 main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  align-content: center;
 }
 section#gps {
   margin: 3rem;
