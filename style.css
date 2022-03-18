@@ -12,7 +12,6 @@ body {
   background-repeat: repeat-x;
   text-align: center;
   display: flex;
-  flex-direction: column;
   justify-content: center;
 }
 body.noche {
@@ -26,6 +25,7 @@ body.noche {
 }
 header {
   margin-top: 1rem;
+  position: fixed;
 }
 main {
   display: flex;
@@ -110,7 +110,7 @@ section#carrusel {
   align-self: center;
   width: 50vw;
   display: flex;
-  align-items: ce;
+  justify-content: center;
 }
 ul {
   padding: 0.5rem;
@@ -129,7 +129,7 @@ ul {
 
 ul::-webkit-scrollbar {
   background-color: rgba(61, 61, 66, 0);
-  height: 5px;
+  /*   height: 5px; */
 }
 
 ul::-webkit-scrollbar-thumb {
@@ -142,8 +142,6 @@ ul::-webkit-scrollbar-thumb:hover {
 
 li {
   list-style: none;
-
-  /* padding: 15px; */
 }
 
 /* li img {
