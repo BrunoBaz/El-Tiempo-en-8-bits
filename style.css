@@ -51,6 +51,7 @@ section#gps.activo {
 
 p {
   font-family: "Press Start 2P", cursive;
+  padding: 0.5rem;
 }
 
 header img {
@@ -100,7 +101,7 @@ section#carrusel {
   background-color: rgba(240, 248, 255, 0.219);
   border-radius: 10px;
   align-self: center;
-  width: 50vh;
+  width: 50vw;
 }
 ul {
   display: flex;
@@ -112,6 +113,7 @@ ul {
   margin-inline-end: 0px;
   padding-inline-start: 0px;
   justify-content: center center;
+  align-items: center;
 }
 
 ul::-webkit-scrollbar {
@@ -130,11 +132,10 @@ ul::-webkit-scrollbar-thumb:hover {
 li {
   list-style: none;
   min-width: 25%;
-  height: 10%;
+
   padding: 15px;
-  border: 1px solid black;
 }
 
 li img {
-  width: 8rem;
+  width: 6rem;
 }
