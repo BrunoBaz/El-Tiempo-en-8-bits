@@ -1,5 +1,10 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
-  height: 99vh;
+  height: 100vh;
   background-image: url(Recursos/2.fondo\ dia.png);
   background-color: #66cccc;
   background-size: contain;
@@ -10,7 +15,7 @@ body {
   flex-direction: column;
 }
 body.noche {
-  height: 99vh;
+  height: 100vh;
   background-image: url(Recursos/3.fondo\ noche.png);
   background-color: #66cccc;
   background-size: contain;
@@ -20,8 +25,12 @@ body.noche {
   display: flex;
   flex-direction: column;
 }
+header {
+  margin: 2rem;
+}
 
 section#gps {
+  margin: 3rem;
   display: none;
   text-align: center center;
   position: fixed;
@@ -59,6 +68,7 @@ button {
   background-repeat: no-repeat;
   background-position: 0px;
   text-align: center;
+  padding: 2rem;
   font-family: "Press Start 2P", cursive;
   border: 0cm;
   width: 10rem;
