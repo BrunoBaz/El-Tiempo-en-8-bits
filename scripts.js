@@ -39,8 +39,8 @@ const now = new Date().toLocaleString("es-ES", {
 const myPosition = document.createElement("p");
 
 const succes = async (pos) => {
-  const lat = await /* pos.coords.latitude */ /* 8.5532; */ 41.9025;
-  const lon = await /* pos.coords.longitude */ /* 115.491; */ -8.87367;
+  const lat = await pos.coords.latitude;
+  const lon = await pos.coords.longitude;
   fetchData(lat, lon);
   currentWeatherData(lat, lon);
 };
