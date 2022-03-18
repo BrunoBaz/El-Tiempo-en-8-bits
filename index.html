@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="icon" href="Recursos/0.sol.ico" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <title>El Tiempo en 8-Bits</title>
+  </head>
+  <body>
+    <header id="logo">
+      <img src="Recursos/1.logo.svg" alt="logo de el tiempo en 8 bits" />
+    </header>
+
+    <section class="activo" id="gps">
+      <img src="Recursos/G.9.GPS-animacion.gif" alt="grafico de pantalla gps" />
+      <p>¿Nos dejas ver tu ubicación?</p>
+      <button type="submit" id="gps-boton"><p>PERMITIR GPS</p></button>
+    </section>
+    <section class="clima" hidden id="despejado">
+      <img
+        class="sol"
+        id="sol"
+        src="Recursos/G.1.sol-animacion.gif"
+        alt="despejado"
+        hidden
+      />
+      <img
+        class="luna"
+        id="luna"
+        src="Recursos/G.1.1luna-animacion.gif"
+        alt="despejado"
+        hidden
+      />
+      <p>Coge las gafas de sol por que saldrá el sol</p>
+    </section>
+    <section class="clima" hidden id="cloudy">
+      <img src="Recursos/G.2.pocas-nubes-animacion.gif" alt="pocas nubes" />
+      <p>no lloverá pero tampoco hará sol, esta nublado</p>
+    </section>
+    <section class="clima" hidden id="nublado">
+      <img src="Recursos/G.3.nublado-animacion.gif" alt="nublado" />
+      <p>no lloverá pero tampoco hará sol, esta nublado</p>
+    </section>
+    <section class="clima" hidden id="lluvia">
+      <img src="Recursos/G.4.lluvia-animacion.gif" alt="lloverá" />
+      <p>lloverá en las proximas 8 horas</p>
+    </section>
+    <section class="clima" hidden id="aguacero">
+      <img src="Recursos/G.5.aguacero-animacion.gif" alt="aguacero" />
+      <p>lloverá suavemente en las proximas 8 horas</p>
+    </section>
+    <section class="clima" hidden id="tormenta">
+      <img src="Recursos/G.6.tormenta-animacion.gif" alt="tormenta" />
+      <p>habrá una tormenta en las proximas 8 horas</p>
+    </section>
+    <section class="clima" hidden id="nieve">
+      <img src="Recursos/G.7.nieve-animacion.gif" alt="Nieve" />
+      <p>lloverá suavemente en las proximas 8 horas</p>
+    </section>
+    <section class="clima" hidden id="neblina">
+      <img src="Recursos/G.8.niebla-animacion.gif" alt="neblina" />
+      <p>habrá niebla en las proximas 8 horas</p>
+    </section>
+    <section hidden id="error">
+      <img src="Recursos/error-animacion.gif" alt="error" />
+      <p>ha habido un problema, vuelve aintentarlo</p>
+    </section>
+    <section class="carrusel" hidden id="carrusel">
+      <ul class="Grid-tiempo"></ul>
+    </section>
+    <script src="scripts.js"></script>
+  </body>
+</html>
