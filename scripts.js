@@ -39,8 +39,8 @@ const now = new Date().toLocaleString("es-ES", {
 const myPosition = document.createElement("p");
 
 const succes = async (pos) => {
-  const lat = await pos.coords.latitude;
-  const lon = await pos.coords.longitude;
+  const lat = await /* pos.coords.latitude; */ 41.9025;
+  const lon = await /* pos.coords.longitude; */ -8.87367;
   fetchData(lat, lon);
   currentWeatherData(lat, lon);
 };
@@ -152,11 +152,17 @@ const listWeather = async (newWeathers) => {
     <p>${clima.temp}ºC</p>`;
 
       case "Clear":
-        return ` <li>
+        if (clima.hora > "07:00" && clima.hora < "20:00") {
+          return ` <li>
     <p>${clima.hora}</p>
     <img src="${imgSol}">
     <p>${clima.temp}ºC</p>`;
-
+        } else {
+          return ` <li>
+      <p>${clima.hora}</p>
+      <img src="${imgLuna}">
+      <p>${clima.temp}ºC</p>`;
+        }
       case "Snow":
         return ` <li>
     <p>${clima.hora}</p>
