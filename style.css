@@ -7,8 +7,8 @@ body {
   height: 100vh;
   background-image: url(Recursos/2.fondo\ dia.png);
   background-color: #66cccc;
-  background-size: cover;
-  background-position: center bottom;
+  background-size: contain;
+  background-position: center center fixed;
   background-repeat: repeat-x;
   text-align: center;
 }
