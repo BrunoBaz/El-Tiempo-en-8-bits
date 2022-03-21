@@ -17,12 +17,22 @@
   <body class="dia">
     <header id="logo">
       <img src="Recursos/logo.svg" alt="logo de el tiempo en 8 bits" />
+      <form>
+        <input
+          type="search"
+          name="location"
+          id="location"
+          placeholder="  INDICA TU CIUDAD"
+        />
+        <input type="submit" value="Buscar" id="buscar" />
+      </form>
+      <p>GPS<img src="Recursos/gps3.png" alt="Logo GPS" id="logo-gps" /></p>
     </header>
     <main>
       <section class="activo" id="gps">
         <img src="Recursos/GPS-animacion.gif" alt="grafico de pantalla gps" />
         <p>¿Nos dejas ver tu ubicación?</p>
-        <button type="submit" id="gps-boton"><p>PERMITIR GPS</p></button>
+        <button type="submit" id="gps-boton">PERMITIR GPS</button>
       </section>
       <section class="clima"></section>
       <section class="carrusel" id="carrusel"></section>

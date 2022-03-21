@@ -1,5 +1,7 @@
 "use strict";
-export { currentWeatherData, weatherData, backgroundDiaNoche };
+export { currentWeatherData, weatherData, backgroundDiaNoche, fetchData };
+const myForm = document.querySelector("form");
+const mySearch = document.querySelector("input#location");
 const myBody = document.querySelector("body");
 const mySection = document.querySelector("section.clima");
 const myCarrusel = document.querySelector("section#carrusel");
@@ -23,8 +25,10 @@ const now = new Date().toLocaleString("es-ES", {
   timeStyle: "short",
   dateStyle: "long",
 });
+const actGps = document.getElementById("gps");
+
+const key = "5ffc44f30e5179f5e6420ea84b83cb9a";
 const currentWeatherData = async (lat, lon) => {
-  const key = "5ffc44f30e5179f5e6420ea84b83cb9a";
   const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${key}`;
   const resp = await fetch(url);
   const data = await resp.json();
@@ -95,7 +99,6 @@ const currentWeather = async (data) => {
             <p>Hay niebla, mira por donde pisas</p>`;
     }
   });
-  console.log(arrayCurrentWeather);
   mySection.innerHTML = arrayCurrentWeather.join("");
 };
 const weatherData = async (data) => {
@@ -110,13 +113,11 @@ const weatherData = async (data) => {
         meteo: clima.weather.map((el) => el.main).join(),
       };
     });
-    console.log(newWeathers);
     listWeather(newWeathers);
   }
 };
 
 const listWeather = async (newWeathers) => {
-  console.log(newWeathers);
   const arrayHTMLweather = newWeathers.map((clima) => {
     switch (clima.meteo) {
       case "Clouds":
@@ -184,3 +185,29 @@ const backgroundDiaNoche = async (data) => {
     myBody.classList.add("noche");
   }
 };
+async function fetchData(lat, lon) {
+  const key = "5ffc44f30e5179f5e6420ea84b83cb9a";
+  const url = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=metric&exclude=minutely,daily&appid=${key}`;
+  const resp = await fetch(url);
+  const data = await resp.json();
+  weatherData(data);
+  backgroundDiaNoche(data);
+}
+
+const getCoordsCity = async (city) => {
+  const resp = await fetch(
+    `https://api.openweathermap.org/data/2.5/weather?q=${city},ES&appid=${key}`
+  );
+  const data = await resp.json();
+  const lat = data.coord.lat;
+  const lon = data.coord.lon;
+  console.log(data);
+  fetchData(lat, lon);
+  currentWeatherData(lat, lon);
+};
+myForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  console.log(mySearch.value);
+  getCoordsCity(mySearch.value);
+  actGps.style.display = "none";
+});
