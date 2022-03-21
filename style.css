@@ -5,79 +5,64 @@
 }
 body {
   height: 100vh;
-  background-image: url(Recursos/2.fondo\ dia.png);
+  /* background-image: url("Recursos/G.9.1.GPS-animacion.gif"); */
   background-color: #66cccc;
-  background-size: contain;
-  background-position: center center fixed;
+  background-size: cover;
+  background-position: center center;
   background-repeat: repeat-x;
   text-align: center;
+  display: grid;
+  justify-content: center;
+  grid-template-rows: 0.2fr 0.8fr;
+  background-attachment: fixed;
 }
 body.noche {
-  height: 100vh;
-  background-image: url(Recursos/3.fondo\ noche.png);
-  background-color: #66cccc;
+  background-image: url("Recursos/fondo-noche@2x.png");
+  background-position: center bottom;
   background-size: contain;
-  background-position: fixed;
-  background-repeat: repeat-x;
-  text-align: center;
 }
-header {
-  padding-top: 1rem;
-  margin-bottom: 1rem;
-  position: relative;
-}
-main {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+body.dia {
+  background-image: url("Recursos/fondo-dia@2x.png");
+  background-position: center bottom;
+  background-size: cover;
 }
 section#gps {
-  margin: 3rem;
   display: none;
-  text-align: center center;
-  position: fixed;
-  top: 100px;
-  bottom: 100px;
-  left: 10px;
-  right: 10px;
-  margin-bottom: 3rem;
+}
+header#logo {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  width: 100vw;
 }
 section#gps.activo {
-  display: block;
-  text-align: center center;
-  position: fixed;
-  top: 150px;
-  bottom: 100px;
-  left: 10px;
-  right: 10px;
-  margin-bottom: 3rem;
+  display: flex;
+  text-align: center;
+  gap: 2rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 p {
   font-family: "Press Start 2P", cursive;
   padding: 0.5rem;
-  font-size: 1rem;
 }
 
-header img {
-  height: 7rem;
-}
-
-section img {
-  width: 7rem;
+img {
+  width: 10rem;
+  filter: drop-shadow(5px 5px 5px rgba(10, 10, 10, 0.712));
 }
 
 button {
-  background-image: url(Recursos/4.boton.svg);
+  background-image: url(Recursos/boton.svg);
   background-color: rgba(240, 255, 255, 0);
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: 0px;
+  filter: drop-shadow(5px 5px 5px rgba(10, 10, 10, 0.712));
   text-align: center;
-  padding: 1rem 0;
-  font-family: "Press Start 2P", cursive;
-  border: 0cm;
-  width: 10rem;
+  border: none;
+  width: 13rem;
   height: 5rem;
   text-align: center;
 }
@@ -85,49 +70,47 @@ button {
 button p:hover {
   font-family: "Press Start 2P", cursive;
   color: rgb(255, 255, 255);
-  text-align: center;
 }
 
 button:hover {
-  background-image: url(Recursos/5.boton-hover.svg);
+  background-image: url(Recursos/boton-hover.svg);
   background-color: rgba(240, 255, 255, 0);
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: 0px;
   text-align: center;
-  font-family: "Press Start 2P", cursive;
-  border: 0cm;
-  width: 10rem;
+
+  border: none;
+  width: 13rem;
   height: 5rem;
   text-align: center;
 }
 
+main {
+  display: grid;
+  grid-template-rows: 0.5fr 0.5fr;
+
+  justify-items: center;
+  justify-content: center;
+}
+
 section#carrusel {
-  margin-top: 40px;
   background-color: rgba(240, 248, 255, 0.219);
-  border-radius: 10px;
+  box-shadow: inset 0px 0px 5px 2px rgb(24, 24, 23);
+  border-radius: 1rem;
   align-self: center;
-  width: 100vw;
 }
 ul {
-  margin: 0;
-  padding: 0.3rem;
-  display: grid;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
   overflow-x: auto;
   list-style-type: disc;
-  margin-block-start: 0em;
-  margin-block-end: 0em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-  padding-inline-start: 0px;
-  grid-auto-flow: column;
-  justify-content: center center;
-  align-items: center;
 }
 
 ul::-webkit-scrollbar {
   background-color: rgba(61, 61, 66, 0);
-  /*   height: 5px; */
+  height: 5px;
 }
 
 ul::-webkit-scrollbar-thumb {
@@ -135,13 +118,15 @@ ul::-webkit-scrollbar-thumb {
   border-radius: 10px;
 }
 ul::-webkit-scrollbar-thumb:hover {
-  background-color: rgb(61, 61, 66);
+  background-color: rgb(31, 31, 34);
 }
 
 li {
   list-style: none;
+  height: 10%;
+  padding: 1rem;
 }
 
-/* li img {
-  width: 6rem;
-} */
+li img {
+  width: 100%;
+}
